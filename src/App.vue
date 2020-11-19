@@ -16,6 +16,12 @@ export default {
   components: {
     Navbars,
     Tabbars
+  },
+  //方法
+  methods: {
+    handleOne() {
+      
+    }
   }
 }
 </script>

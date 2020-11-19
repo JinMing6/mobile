@@ -5,6 +5,7 @@ import ShopCart from '@/views/ShopCart'
 import Mine from '@/views/Mine'
 import Search from '@/views/Search'
 import Details from '@/views/Details'
+import Demo from '@/views/Demo'
 import NotFount from '@/views/NotFount'
 
 const routes = [
@@ -35,6 +36,10 @@ const routes = [
     {
         path: '/details/:id',
         component: Details
+    },
+    {
+        path: '/demo',
+        component: Demo
     },
     {
         path: '/:catchAll(.*)',
