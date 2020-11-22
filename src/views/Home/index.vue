@@ -10,9 +10,15 @@
     <DividerLine />
     <!-- 展示图 -->
     <div class="showImg">
-      <div class="showImgLeft">左</div>
-      <div class="showImgRightTop">右_上</div>
-      <div class="showImgRightBot">右_下</div>
+      <div class="showImgLeft">
+        <img src="@/assets/imgs/gridImg0.webp" alt="" class="showImgLeft_img">
+      </div>
+      <div class="showImgRightTop">
+        <img src="@/assets/imgs/gridImg1.webp" alt="" class="showImgLeft_img">
+      </div>
+      <div class="showImgRightBot">
+        <img src="@/assets/imgs/gridImg2.webp" alt="" class="showImgLeft_img">
+      </div>
     </div>
     <DividerLine />
     <!-- 广告位0 -->

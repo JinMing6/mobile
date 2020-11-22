@@ -6,7 +6,9 @@
         class="bannerItem"
         :key="item.id"
         @click="handleClick(item)"
-      >{{item.title}}</SwipeItem>
+      >
+        <img :src="item.img" alt="" class="bannerItem_img">
+      </SwipeItem>
     </Swipe>
   </div>
 </template>
@@ -24,15 +26,13 @@ export default {
       list: [
         {
           id: 0,
-          title: '轮播0'
+          title: '轮播0',
+          img: require('@/assets/imgs/banner0.jpg')
         },
         {
           id: 1,
-          title: '轮播1'
-        },
-        {
-          id: 2,
-          title: '轮播2'
+          title: '轮播1',
+          img: require('@/assets/imgs/banner1.jpg')
         }
       ]
     })
@@ -58,6 +58,10 @@ export default {
         line-height: 2rem;
         text-align: center;
         background-color: #39a9ed;
+        .bannerItem_img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }

@@ -1,23 +1,42 @@
 <template>
-  <div class="gridBox">
-      <Grid :column-num="3">
-          <GridItem icon="photo-o" text="文字" ></GridItem>
-          <GridItem icon="photo-o" text="文字" ></GridItem>
-          <GridItem icon="photo-o" text="文字" ></GridItem>
-          <GridItem icon="photo-o" text="文字" ></GridItem>
-          <GridItem icon="photo-o" text="文字" ></GridItem>
-          <GridItem icon="photo-o" text="文字" ></GridItem>
-      </Grid>
+  <div class="grid_box">
+      <div class="grid_item" v-for="item in gridState.list" :key="item">
+          <img src="@/assets/imgs/gridBox0.png" alt="" class="grid_item_img">
+      </div>
   </div>
 </template>
 
 <script>
-import {Grid, GridItem} from 'vant'
+import {reactive} from 'vue'
 export default {
-    components: {Grid, GridItem}
+    setup() {
+        const gridState = reactive({
+            list: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        })
+        return {
+            gridState
+        }
+    }
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+    .grid_box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .grid_item {
+            width: 19%;
+            height: 1rem;
+            background: red;
+            &:nth-child(-n + 3) {
+                background: skyblue;
+                margin-bottom: 0.04rem;
+            }
+            .grid_item_img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
 </style>

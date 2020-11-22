@@ -8,7 +8,8 @@
 </template>
 
 <script>
-import { getCurrentInstance, reactive } from "vue";
+import {reactive } from "vue";
+import {useRouter} from 'vue-router'
 import { Tabbar, TabbarItem } from "vant";
 export default {
   components: {
@@ -16,12 +17,12 @@ export default {
     TabbarItem,
   },
   setup() {
-    let { ctx } = getCurrentInstance();
+    const {push} = useRouter()
     let states = reactive({
       active: "home",
     });
     const handleNav = (path) => {
-      ctx.$router.push({ path });
+      push({path})
     };
     return {
       states,
